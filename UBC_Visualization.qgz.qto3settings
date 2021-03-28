@@ -1,0 +1,205 @@
+{
+  "LAYERS": [
+    {
+      "geomType": 1,
+      "layerId": "ubcv_trees_882598ed_2507_4cda_bab4_e8ab669d1821",
+      "name": "ubcv_trees",
+      "properties": {
+        "checkBox_Clickable": true,
+        "checkBox_Clip": true,
+        "checkBox_ExportAttrs": false,
+        "checkBox_Visible": true,
+        "comboBox_Label": null,
+        "comboBox_ObjectType": "Model File",
+        "comboBox_altitudeMode": "vancouver_area_dem_191d97cc_9f74_4f0e_87a9_6449af2dfed7",
+        "fieldExpressionWidget_altitude": "4",
+        "labelHeightWidget": {
+          "comboData": 0,
+          "comboText": "Absolute",
+          "editText": "203",
+          "type": 6
+        },
+        "radioButton_AllFeatures": true,
+        "radioButton_Expression": true,
+        "styleWidget0": {
+          "comboData": 1,
+          "comboText": "File path or URL",
+          "editText": "'C:/Users/Joshua Green/Documents/GitHub/UBC_QGIS2threejs_v2/UBC_QGIS2threejs_v2/tree/scene.gltf'",
+          "type": 3
+        },
+        "styleWidget1": {
+          "comboData": null,
+          "comboText": "Expression",
+          "editText": "0.05",
+          "type": 1
+        },
+        "styleWidget2": {
+          "comboData": null,
+          "comboText": "Expression",
+          "editText": "0",
+          "type": 1
+        },
+        "styleWidget3": {
+          "comboData": null,
+          "comboText": "Expression",
+          "editText": "0",
+          "type": 1
+        },
+        "styleWidget4": {
+          "comboData": null,
+          "comboText": "Expression",
+          "editText": "0",
+          "type": 1
+        },
+        "styleWidget5": {
+          "comboData": "XYZ",
+          "type": 10
+        }
+      },
+      "visible": true
+    },
+    {
+      "geomType": 3,
+      "layerId": "ubcv_building_records_5136e453_e4f2_4ba1_a24f_9774209bd241",
+      "name": "ubcv_building_records",
+      "properties": {
+        "checkBox_Clickable": true,
+        "checkBox_Clip": true,
+        "checkBox_ExportAttrs": true,
+        "checkBox_Visible": true,
+        "comboBox_Label": null,
+        "comboBox_ObjectType": "Extruded",
+        "comboBox_altitudeMode": "vancouver_area_dem_191d97cc_9f74_4f0e_87a9_6449af2dfed7",
+        "fieldExpressionWidget_altitude": "0",
+        "labelHeightWidget": {
+          "comboData": 1,
+          "comboText": "Relative",
+          "editText": "0",
+          "type": 6
+        },
+        "radioButton_Expression": true,
+        "radioButton_IntersectingFeatures": true,
+        "styleWidget0": {
+          "comboData": 3,
+          "comboText": "Expression",
+          "editText": "CASE \r\n\r\nWHEN  \"CONSTRUCTION_TYPE\" = 'Wood' THEN color_rgb(191, 128, 64)\r\n\r\nWHEN  \"CONSTRUCTION_TYPE\" = 'Concrete' THEN color_rgb(169, 169, 169)\r\n  \r\nWHEN  \"CONSTRUCTION_TYPE\" = 'Steel' THEN color_rgb(51, 51, 51)  \r\n  \r\nWHEN  \"CONSTRUCTION_TYPE\" = 'Outdoor' THEN color_rgb(51, 204, 51) \r\n\r\nWHEN  \"CONSTRUCTION_TYPE\" = 'Mixed' THEN color_rgb(117, 117, 163) \r\n\r\nWHEN  \"CONSTRUCTION_TYPE\" = 'Temporary' THEN color_rgb(255, 102, 255)\r\n\r\nELSE color_rgb(200, 200, 200)\r\n\r\nEND",
+          "type": 2
+        },
+        "styleWidget1": {
+          "comboData": 1,
+          "comboText": "Feature style",
+          "editText": "",
+          "type": 5
+        },
+        "styleWidget2": {
+          "comboData": null,
+          "comboText": "Expression",
+          "editText": " \"COUNT_FLOORS\" * 5",
+          "type": 1
+        },
+        "styleWidget3": {
+          "comboData": 0,
+          "comboText": "(No Edge)",
+          "editText": "0",
+          "type": 7
+        },
+        "styleWidget4": {},
+        "styleWidget5": {}
+      },
+      "visible": true
+    },
+    {
+      "geomType": 0,
+      "layerId": "vancouver_area_dem_191d97cc_9f74_4f0e_87a9_6449af2dfed7",
+      "name": "vancouver-area-dem",
+      "properties": {
+        "checkBox_Clickable": true,
+        "checkBox_Clip": false,
+        "checkBox_Frame": false,
+        "checkBox_Shading": true,
+        "checkBox_Sides": true,
+        "checkBox_Surroundings": false,
+        "checkBox_TransparentBackground": false,
+        "checkBox_Visible": true,
+        "checkBox_Wireframe": false,
+        "colorButton_Color": "0x000000",
+        "comboBox_ClipLayer": "ubcv_building_records_5136e453_e4f2_4ba1_a24f_9774209bd241",
+        "comboBox_TextureSize": 1024,
+        "horizontalSlider_DEMSize": 2,
+        "lineEdit_ImageFile": "",
+        "radioButton_MapCanvas": true,
+        "spinBox_Opacity": 100,
+        "spinBox_Roughening": 1,
+        "spinBox_Size": 3,
+        "toolButton_EdgeColor": "0x000000",
+        "toolButton_SideColor": "0xccbbaa",
+        "toolButton_WireframeColor": "0x000000"
+      },
+      "visible": true
+    },
+    {
+      "geomType": 0,
+      "layerId": "FLAT",
+      "name": "Flat Plane",
+      "properties": {
+        "checkBox_Clickable": true,
+        "checkBox_Clip": false,
+        "checkBox_Frame": false,
+        "checkBox_Shading": true,
+        "checkBox_Sides": true,
+        "checkBox_Surroundings": false,
+        "checkBox_TransparentBackground": false,
+        "checkBox_Visible": true,
+        "checkBox_Wireframe": false,
+        "colorButton_Color": "0x000000",
+        "comboBox_ClipLayer": "ubcv_building_records_5136e453_e4f2_4ba1_a24f_9774209bd241",
+        "comboBox_TextureSize": 1024,
+        "horizontalSlider_DEMSize": 2,
+        "lineEdit_ImageFile": "",
+        "radioButton_MapCanvas": true,
+        "spinBox_Opacity": 100,
+        "spinBox_Roughening": 1,
+        "spinBox_Size": 3,
+        "toolButton_EdgeColor": "0x000000",
+        "toolButton_SideColor": "0xccbbaa",
+        "toolButton_WireframeColor": "0x000000"
+      },
+      "visible": false
+    }
+  ],
+  "OPT": {
+    "localMode": true
+  },
+  "OutputFilename": "C:/Users/Joshua Green/Documents/GitHub/UBC_QGIS2threejs_v2/UBC_QGIS2threejs_v2\\index.html",
+  "SCENE": {
+    "checkBox_FixAspectRatio": false,
+    "checkBox_Outline": false,
+    "checkBox_autoZShift": false,
+    "colorButton_Color": "0x000000",
+    "comboBox_MaterialType": 0,
+    "lineEdit_BaseSize": "100",
+    "lineEdit_CenterX": "482346.0122197798",
+    "lineEdit_CenterY": "5456057.461460719",
+    "lineEdit_Height": "5974.999053615145",
+    "lineEdit_Rotation": "0",
+    "lineEdit_Width": "4190.138324941683",
+    "lineEdit_zFactor": "1.0",
+    "lineEdit_zShift": "0",
+    "radioButton_FixedExtent": true
+  },
+  "Template": "3DViewer.html",
+  "Title": "UBC_Visualization",
+  "WIDGETS": {
+    "Label": {
+      "Footer": "",
+      "Header": "3D Map of the University of British Columbia Visualized using QGIS2threejs"
+    },
+    "Navi": {
+      "enabled": true
+    },
+    "NorthArrow": {
+      "color": "0xffef57",
+      "visible": true
+    }
+  }
+}
